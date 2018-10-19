@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import Slider from 'react-slick'
-import WASA from '../resources/slides/wasa.jpg'
+import PHA from '../resources/slides/pha.jpg'
 import PHS from '../resources/slides/chord.svg'
+import {Button} from 'react-bootstrap'
 
 class Insights extends Component {
   state = {
@@ -13,6 +14,11 @@ class Insights extends Component {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000
+  }
+
+  phaInsights = () => {
+    window.open("https://gatconsulting.github.io/phainsights", "PHAInsights");
+    window.close();
   }
 
   render () {
@@ -38,10 +44,10 @@ class Insights extends Component {
                     </div>
                   </div>
                   <div className="insight" style={{display: 'flex', width: '100%'}}>
-                    <img alt="WASA Visualization" className="insightImage" style={{borderRadius: '7px', marginRight: '30px', onjectFit: 'cover', height: '320px'}} src={WASA}/>
+                    <img alt="WASA Visualization" className="insightImage" style={{borderRadius: '7px', marginRight: '30px', onjectFit: 'cover', height: '320px'}} src={PHA}/>
                     <div>
-                      <h2 style={{textAlign: 'left', marginBottom: '20px', paddingTop: '35px', fontWeight: '300', fontSize: '35px'}}>EXPLORING PENETRATION OF WASA SERVICES ACROSS COLONIES IN FAISALABAD</h2>
-                      <p style={{fontSize: '22px'}}>ONLINE SOON</p>
+                      <h2 style={{textAlign: 'left', marginBottom: '20px', paddingTop: '35px', fontWeight: '300', fontSize: '35px'}}>EXPLORING INSIGHTS AND TRENDS IN PHA MONITORING</h2>
+                      <Button className="phabutton" style={{width: '160px', alignSelf: 'center', marginBottom: '10px', marginTop: '10px'}} onClick={() => this.phaInsights()} bsStyle="primary">Visit Sites</Button>
                     </div>
                   </div>
                 </Slider>

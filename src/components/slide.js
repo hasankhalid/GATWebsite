@@ -16,6 +16,11 @@ class Slide extends Component {
     interval: 5000
   }
 
+  phaInsights = () => {
+    window.open("https://gatconsulting.github.io/phainsights", "PHAInsights");
+    window.close();
+  }
+
   render (){
     const {nextIcon, prevIcon, interval} = this.state;
     return (
@@ -54,9 +59,7 @@ class Slide extends Component {
                 <h2 style={{fontWeight: '300', fontSize: '40px'}}>Monitoring and Evaluation Punjab Horticulture Authority</h2>
               </Zoom>
               <Fade bottom>
-                <IndexLinkContainer style={{width: '160px', alignSelf: 'center', marginBottom: '10px', backgroundColor: '#F97F51', borderColor: '#F97F51'}} className="hoverShadow" to='/projects'>
-                  <Button bsStyle="primary">Open Projects</Button>
-                </IndexLinkContainer>
+                <Button onClick={() => this.phaInsights()} style={{width: '160px', alignSelf: 'center', marginBottom: '10px', backgroundColor: '#F97F51', borderColor: '#F97F51'}} className="hoverShadow" bsStyle="primary">PHA Insights</Button>
               </Fade>
             </Carousel.Caption>
           </Carousel.Item>

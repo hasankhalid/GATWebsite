@@ -230,26 +230,6 @@ class Portfolio extends Component {
       imagesrc: food
     }],
     mneprojects: [{
-      name: 'M&E for Parks and Horticulture Authority Phase 1',
-      sector: 'Development',
-      client: 'Punjab Horticulture Authority',
-      location: 'Lahore',
-      desc: 'Monitoring and Evaluation of 5700 employees in approximately 1300 locations which include offices, parks and greenbelts across Lahore. The exercise monitored day to day performance and attendance of PHA staff. It also monitored performance and functional status of the field machinery.',
-      startdate: 'April 2017',
-      enddate: 'March 2018',
-      services: ['Survey', 'Monitoring and Evaluation'],
-      imagesrc: pha
-    },{
-      name: 'M&E for Parks and Horticulture Authority Phase 2',
-      sector: 'Development',
-      client: 'Punjab Horticulture Authority',
-      location: 'Lahore',
-      desc: 'Monitoring and Evaluation of 6868 employees in 1422 locations which include offices, parks and greenbelts across Lahore. The exercise monitors day to day performance and attendance of PHA staff. It also monitors performance and functional status of the field machinery.',
-      startdate: 'April 2018',
-      enddate: 'March 2019',
-      services: ['Survey', 'Monitoring and Evaluation'],
-      imagesrc: pha2
-    },{
       name: 'Evaluation of reenrollment of children in schools',
       sector: 'Education',
       client: 'School Education Department',
@@ -328,6 +308,11 @@ class Portfolio extends Component {
     this.setState({ show: false });
   }
 
+  phaInsights = () => {
+    window.open("https://gatconsulting.github.io/phainsights", "PHAInsights");
+    window.close();
+  }
+
   render () {
     return (
       <Grid>
@@ -376,6 +361,32 @@ class Portfolio extends Component {
           ))}
           <Col lg={12} md={12} sm={12} xs={12} style={{marginBottom: '15px'}}>
             <h2 style={{textAlign: 'left', marginBottom: '20px', fontWeight: '300', fontSize: '25px'}}>MONITORING AND EVALUATIONS</h2>
+          </Col>
+          <Col lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
+            <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
+              <div onClick={() => this.phaInsights()} style={{position: 'relative'}}>
+                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover'}} src={pha}/>
+                <Zoom>
+                <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
+                  <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>M&E for Parks and Horticulture Authority Phase 1</h3>
+                  <p className="responsiveProjSector" style={{textAlign: 'center', fontWeight: '300', fontSize: '14px'}}>Sector: Development</p>
+                </div>
+                </Zoom>
+              </div>
+            </Tilt>
+          </Col>
+          <Col lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
+            <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
+              <div onClick={() => this.phaInsights()} style={{position: 'relative'}}>
+                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover'}} src={pha2}/>
+                <Zoom>
+                <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
+                  <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>M&E for Parks and Horticulture Authority Phase 2</h3>
+                  <p className="responsiveProjSector" style={{textAlign: 'center', fontWeight: '300', fontSize: '14px'}}>Sector: Development</p>
+                </div>
+                </Zoom>
+              </div>
+            </Tilt>
           </Col>
           {this.state.mneprojects.length > 0 && this.state.mneprojects.map((mneproj, index) => (
             <Col key={index} lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>

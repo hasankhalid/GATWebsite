@@ -55,14 +55,14 @@ class Footer extends Component {
             <Col lg={12} md={12} sm={12} xs={12} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginBottom: '20px'}}>
               <p>3-Shahrah-e-Aiwan-e-Tijarat, China Chowk, Lahore</p>
               <p>Phone: 92-42-37500724</p>
-              <p>Email: contact@gatconsultancy.com</p>
+              <p>Email: contact@gatconsulting.org</p>
             </Col>
             <Col lg={12} md={12} sm={12} xs={12}>
             <div style={{width: '100%', height: '1px', backgroundColor: '#9E9E9E'}}></div>
             </Col>
             <Col lg={12} md={12} sm={12} xs={12} style={{marginTop: '20px', marginBottom: '40px'}}>
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', borderWidth: '5px', borderColor: 'white'}}>
-                <p>Copyright 2018, GAT Consulting Pvt. Ltd.</p>
+                <p>Copyright 2018, GAT Consulting (Pvt) Ltd.</p>
               </div>
             </Col>
           </Row>

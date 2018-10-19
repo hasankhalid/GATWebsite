@@ -9,6 +9,12 @@ import Fade from 'react-reveal/Fade'
 import {IndexLinkContainer} from 'react-router-bootstrap'
 
 class HomeProjects extends Component {
+
+  phaInsights = () => {
+    window.open("https://gatconsulting.github.io/phainsights", "PHAInsights");
+    window.close();
+  }
+
   render () {
     return (
       <Grid>
@@ -47,7 +53,7 @@ class HomeProjects extends Component {
                   <li>7200 employees monitored in 24 offices, 1100 parks and greenbelts</li>
                   <li>Monitoring has improved enrollment and increased attendance rates</li>
                 </ul>
-                <p style={{fontSize: '18px', textAlign: 'center', marginBottom: '10px', marginTop: '10px', fontWeight: '300'}}>WEBSITE ONLINE SOON</p>
+                <Button className="phabutton" style={{width: '160px', alignSelf: 'center', marginBottom: '10px', marginTop: '10px'}} onClick={() => this.phaInsights()} bsStyle="primary">PHA Insights</Button>
               </div>
             </div>
           </Col>
