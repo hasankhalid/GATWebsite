@@ -450,3 +450,10 @@ html, body {
   margin-top: 5px;
 
 }
+
+@media only screen and (max-width: 750px) and (orientation: landscape) {
+  .slideContain {
+    height: 400px;
+  }
+
+}
