@@ -29,6 +29,7 @@ import rehana from '../resources/team/rehana.jpg'
 import faheem from '../resources/team/faheem.jpg'
 import junaid from '../resources/team/junaid.jpg'
 import ifra from '../resources/team/ifra.jpg'
+import salma from '../resources/team/salma.jpg'
 
 class TeamMember extends Component {
   data = [
@@ -54,6 +55,10 @@ class TeamMember extends Component {
       name: 'Nadia Ali',
       designation: 'Research Associate',
       past: 'Ex Program Officer PITB, Assitant Manager NADRA Lahore', email: 'contact@gatconsulting.org' },
+    { imgsrc: salma,
+      name: 'Dr Salma Anwar',
+      designation: 'Data Analytics Lead',
+      past: 'PhD Geoinformatics University of Twente, MS Statistics with distinction ', email: 'contact@gatconsulting.org' },
     { imgsrc: saqlain,
       name: 'Dr Saqlain Raza',
       designation: 'Consultant on Statistics/Data Analysis',
@@ -168,7 +173,7 @@ board = [
         {this.data.length > 0 && this.data.map((teamMember, index) => (
           <Col key={index} lg={4} md={4} sm={6} xs={12} style={{display: 'flex', flexDirection: 'column', height: '400px', alignItems: 'center'}}>
             <Fade>
-              <img src={teamMember.imgsrc} alt="Team Avatar" style={{borderRadius: '50%', alignSelf: 'center', marginBottom: '30px', height: '160px', width: '160px'}}/>
+              <img src={teamMember.imgsrc} alt="Team Avatar" style={{borderRadius: '50%', alignSelf: 'center', marginBottom: '30px', height: '160px', width: '160px', filter: 'grayscale(100%)'}}/>
             </Fade>
             <Zoom>
               <p style={{textAlign: 'center', fontSize: '20px', fontWeight: '300'}}>{teamMember.name}</p>
