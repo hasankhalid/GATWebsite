@@ -27,7 +27,8 @@ import phsii from '../resources/projects/phsii.jpg'
 import pschool from '../resources/projects/pschool.jpg'
 import girls from '../resources/projects/girlsschool.jpg'
 import pwd from '../resources/projects/pwd.jpg'
-
+import psssp from '../resources/projects/psssp.jpg'
+import cutlery from '../resources/projects/cutlery.jpg'
 
 class Portfolio extends Component {
 
@@ -48,6 +49,16 @@ class Portfolio extends Component {
       services: ['', '']
     },
     surveyprojects: [{
+      name: 'Industry Technology Benchmarking Study for Category III (Cutlery Product)',
+      sector: 'Research/Industry',
+      client: 'Technology Upgradation and Skill Development Company (TUSDEC), Ministry of Industries , GOP',
+      location: 'Districts Sialkot, Wazirabad and Gujranwala in Punjab',
+      desc: 'This study involves the determination of the challenges facing the cutlery industry through extensive primary and secondary research, detailed meeting with stakeholders, studying international linkages and markets, analysis of HR needs against existing availability and designing of guidelines and policy recommendations to improve production of this sector.',
+      startdate: 'October 2018',
+      enddate: 'March 2019',
+      services: ['Survey', 'Data Analysis', 'Assessment', 'Recommendations'],
+      imagesrc: cutlery
+    },{
       name: 'Punjab Health Survey Round II',
       sector: 'Health',
       client: 'Bureau of Statistics, Planning and Development Department, Goverment of Punjab',
@@ -169,6 +180,36 @@ class Portfolio extends Component {
       imagesrc: stateland
     }],
     tpvprojects: [{
+      name: 'Assessment of Learning Outcomes of Students of Community & Government Schools in PPR Supported Districts',
+      sector: 'Education',
+      client: 'Pakistan Poverty Alleviation Fund (PPAF)',
+      location: '2 districts each of KPK and Baluchistan',
+      desc: 'This project is currently in progress',
+      startdate: 'July 2019',
+      enddate: 'November 2019 (Expected)',
+      services: ['Third Party Validation', 'Survey', 'Training', 'Development of Assessment Tools'],
+      imagesrc: books
+    },{
+      name: 'Third Party Validation of Non – Salary Reforms (NSB) 2015/16, 2016/17 and 2017/18',
+      sector: 'Education',
+      client: 'Cambridge Education',
+      location: '12 districts of Punjab',
+      desc: 'This was a highly intensive TPV taken within a very short span of time to meet FY deadlines. The purpose of this validation exercise was to determine the benefits of the NSB on schools. It required interviews at 369 schools in 12 districts of Punjab along with interviews of district management officials (CEO, DAO, DEO and AEO) in all districts. 12 focus group discussions were also undertaken of School Council members as well as influential members of society. The School Education Department intends to strengthen the design and implementation of this school specific non salary budget. Auditors were specially hired to carry of the field work of getting the financial information from the Head Teachers.',
+      startdate: 'April 2019',
+      enddate: 'May 2019',
+      services: ['Third Party Validation', 'Survey', 'Data Analysis and Visualization', 'Training', 'Application Development'],
+      imagesrc: girls
+    },{
+      name: 'Third Party Validation of Punjab Secondary School Stipend Programme (PSSSP III)',
+      sector: 'Education',
+      client: 'Cambridge Education',
+      location: '16 districts of Punjab',
+      desc: 'TPV of the PSSSP III project required interviews at 285 schools in all 16 districts of primarily South Punjab. Interviews with 285 Head Teachers and 560 selected and random girl students receiving the stipend and their parents was undertaken. The TPV’s purpose was to verify beneficiary data, enrolment, attendance, and disbursement information of the programme. The findings from the TPV will be used to strengthen the Girls’ Stipend Programme to increase transition to, and retention in, secondary schools.',
+      startdate: 'April 2019',
+      enddate: 'May 2019',
+      services: ['Third Party Validation', 'Survey', 'Data Analysis and Visualization', 'Training', 'Application Development'],
+      imagesrc: psssp
+    },{
       name: 'TPV of Public Awareness Campaign / Media Plan',
       sector: 'Health',
       client: 'Population Welfare Department',
@@ -189,22 +230,12 @@ class Portfolio extends Component {
       services: ['Third Party Validation, Data Analysis'],
       imagesrc: brick
     },{
-      name: 'TPV 1 (Geo Tagging of Schools, Mauzas and Settlements)',
+      name: 'TPV 1 & 2 (Geo Tagging of Schools, Mauzas and Settlements)',
       sector: 'Education',
       client: 'Cambridge Education, World Bank',
       location: 'Southern Punjab',
       desc: 'A third party validation was conducted to validate geotagged locations of schools, mauzas and settlements in the 36 districts across Punjab. The objective of the validation was to ensure the accuracy of the geotagged locations so that the sample for the girls supplement stipend program could be drawn',
       startdate: 'April 2014',
-      enddate: 'May 2014',
-      services: ['Third Party Validation', 'Survey'],
-      imagesrc: geotag
-    },{
-      name: 'TPV 2 (Geo Tagging of Schools, Mauzas and Settlements)',
-      sector: 'Education',
-      client: 'Cambridge Education, World Bank',
-      location: 'Southern Punjab',
-      desc: 'A third party validation was conducted to validate geotagged locations of schools, mauzas and settlements in the 36 districts across Punjab. The objective of the validation was to ensure the accuracy of the geotagged locations so that the sample for the girls supplement stipend program could be drawn',
-      startdate: 'June 2015',
       enddate: 'December 2015',
       services: ['Third Party Validation', 'Survey'],
       imagesrc: geotag
@@ -321,14 +352,14 @@ class Portfolio extends Component {
             <h2 style={{textAlign: 'center', marginBottom: '20px', fontWeight: '300', fontSize: '35px'}}>FEATURED PROJECTS</h2>
           </Col>
           <Col lg={12} md={12} sm={12} xs={12} style={{marginBottom: '15px'}}>
-            <h2 style={{textAlign: 'left', marginBottom: '20px', fontWeight: '300', fontSize: '25px'}}>SURVEYS</h2>
+            <h2 style={{textAlign: 'left', marginBottom: '20px', fontWeight: '300', fontSize: '25px'}}>SURVEYS/RESEARCH</h2>
           </Col>
           {this.state.surveyprojects.length > 0 && this.state.surveyprojects.map((surveyproj, index) => (
             <Col key={index} lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: surveyproj.name, sector: surveyproj.sector, client: surveyproj.client, location: surveyproj.location,
                   desc: surveyproj.desc, startdate: surveyproj.startdate, enddate: surveyproj.enddate, services: surveyproj.services}})} style={{position: 'relative'}}>
-                  <img alt="Survey Project" style={{width: '100%', objectFit: 'cover'}} src={surveyproj.imagesrc}/>
+                  <img alt="Survey Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={surveyproj.imagesrc}/>
                   <Zoom>
                   <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
                     <h3 className="responsiveProjTitle" style={{textAlign: 'center', marginLeft: '2px', marginRight: '2px', fontWeight: '300'}}>{surveyproj.name}</h3>
@@ -339,7 +370,6 @@ class Portfolio extends Component {
               </Tilt>
             </Col>
           ))}
-
           <Col lg={12} md={12} sm={12} xs={12} style={{marginBottom: '15px'}}>
             <h2 style={{textAlign: 'left', marginBottom: '20px', fontWeight: '300', fontSize: '25px'}}>THIRD PARTY VALIDATIONS</h2>
           </Col>
@@ -348,7 +378,7 @@ class Portfolio extends Component {
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: tpvproj.name, sector: tpvproj.sector, client: tpvproj.client, location: tpvproj.location,
                   desc: tpvproj.desc, startdate: tpvproj.startdate, enddate: tpvproj.enddate, services: tpvproj.services}})} style={{position: 'relative'}}>
-                  <img alt="TPV Project" style={{width: '100%', objectFit: 'cover'}} src={tpvproj.imagesrc}/>
+                  <img alt="TPV Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={tpvproj.imagesrc}/>
                   <Zoom>
                   <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(116, 137, 232, 0.5)', width: '100%'}}>
                     <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>{tpvproj.name}</h3>
@@ -365,7 +395,7 @@ class Portfolio extends Component {
           <Col lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
             <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
               <div onClick={() => this.phaInsights()} style={{position: 'relative'}}>
-                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover'}} src={pha}/>
+                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={pha}/>
                 <Zoom>
                 <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
                   <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>M&E for Parks and Horticulture Authority Phase 1</h3>
@@ -378,7 +408,7 @@ class Portfolio extends Component {
           <Col lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
             <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
               <div onClick={() => this.phaInsights()} style={{position: 'relative'}}>
-                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover'}} src={pha2}/>
+                <img alt="M&E Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={pha2}/>
                 <Zoom>
                 <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
                   <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>M&E for Parks and Horticulture Authority Phase 2</h3>
@@ -393,7 +423,7 @@ class Portfolio extends Component {
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: mneproj.name, sector: mneproj.sector, client: mneproj.client, location: mneproj.location,
                   desc: mneproj.desc, startdate: mneproj.startdate, enddate: mneproj.enddate, services: mneproj.services}})} style={{position: 'relative'}}>
-                  <img alt="M&E Project" style={{width: '100%', objectFit: 'cover'}} src={mneproj.imagesrc}/>
+                  <img alt="M&E Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={mneproj.imagesrc}/>
                   <Zoom>
                   <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(243, 132, 170, 0.5)', width: '100%'}}>
                     <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>{mneproj.name}</h3>
@@ -413,7 +443,7 @@ class Portfolio extends Component {
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: supplyproj.name, sector: supplyproj.sector, client: supplyproj.client, location: supplyproj.location,
                   desc: supplyproj.desc, startdate: supplyproj.startdate, enddate: supplyproj.enddate, services: supplyproj.services}})} style={{position: 'relative'}}>
-                  <img alt="Supply Project" style={{width: '100%', objectFit: 'cover'}} src={supplyproj.imagesrc}/>
+                  <img alt="Supply Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={supplyproj.imagesrc}/>
                   <Zoom>
                   <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(64, 63, 99, 0.5)', width: '100%'}}>
                     <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>{supplyproj.name}</h3>
@@ -433,7 +463,7 @@ class Portfolio extends Component {
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: trainproj.name, sector: trainproj.sector, client: trainproj.client, location: trainproj.location,
                   desc: trainproj.desc, startdate: trainproj.startdate, enddate: trainproj.enddate, services: trainproj.services}})} style={{position: 'relative'}}>
-                  <img alt="Training Project" style={{width: '100%', objectFit: 'cover'}} src={trainproj.imagesrc}/>
+                  <img alt="Training Project" style={{width: '100%', objectFit: 'cover', filter: 'grayscale(100%)'}} src={trainproj.imagesrc}/>
                   <Zoom>
                   <div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'rgba(195, 104, 145, 0.5)', width: '100%'}}>
                     <h3 className="responsiveProjTitle" style={{textAlign: 'center', fontWeight: '300'}}>{trainproj.name}</h3>

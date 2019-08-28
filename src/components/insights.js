@@ -47,7 +47,7 @@ class Insights extends Component {
                     <img alt="WASA Visualization" className="insightImage" style={{borderRadius: '7px', marginRight: '30px', onjectFit: 'cover', height: '320px'}} src={PHA}/>
                     <div>
                       <h2 style={{textAlign: 'left', marginBottom: '20px', paddingTop: '35px', fontWeight: '300', fontSize: '35px'}}>EXPLORING INSIGHTS AND TRENDS IN PHA MONITORING</h2>
-                      <Button className="phabutton" style={{width: '160px', alignSelf: 'center', marginBottom: '10px', marginTop: '10px'}} onClick={() => this.phaInsights()} bsStyle="primary">Visit Sites</Button>
+                      <Button className="phabutton" style={{width: '160px', alignSelf: 'center', marginBottom: '10px', marginTop: '10px'}} onClick={() => this.phaInsights()} bsStyle="primary">Visit Site</Button>
                     </div>
                   </div>
                 </Slider>
