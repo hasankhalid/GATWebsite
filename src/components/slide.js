@@ -5,6 +5,7 @@ import MdNavigateBefore from 'react-icons/lib/md/navigate-before'
 import WASA from '../resources/slides/saad1.jpg'
 import PHS from '../resources/slides/PHS.svg'
 import PHA from '../resources/slides/pha.jpg'
+import plotree from '../resources/slides/plotree.png'
 import {IndexLinkContainer} from 'react-router-bootstrap'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
@@ -18,6 +19,11 @@ class Slide extends Component {
 
   phaInsights = () => {
     window.open("https://gatconsulting.github.io/phainsights", "PHAInsights");
+    window.close();
+  }
+
+  plotree = () => {
+    window.open("https://plotree.studio", "Growing Data Narratives | Plotree Info Design");
     window.close();
   }
 
@@ -36,6 +42,17 @@ class Slide extends Component {
                 <IndexLinkContainer style={{width: '160px', alignSelf: 'center', marginBottom: '10px', backgroundColor: '#F97F51', borderColor: '#F97F51'}} className="hoverShadow" to='/projects'>
                   <Button bsStyle="primary">Open Projects</Button>
                 </IndexLinkContainer>
+              </Fade>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+          <img style={{objectFit: 'cover', height: '100%', width: '100%'}} alt="slide3" src={plotree} />
+            <Carousel.Caption>
+              <Zoom>
+                <h2 style={{fontWeight: '300', fontSize: '40px'}}>Interactive data visualization and data analysis tools in partnership with Plotree Info Design</h2>
+              </Zoom>
+              <Fade bottom>
+                <Button onClick={() => this.plotree()} style={{width: '160px', alignSelf: 'center', marginBottom: '10px', backgroundColor: '#F97F51', borderColor: '#F97F51'}} className="hoverShadow" bsStyle="primary">Plotree Website</Button>
               </Fade>
             </Carousel.Caption>
           </Carousel.Item>

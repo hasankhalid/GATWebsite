@@ -8,6 +8,7 @@ import Mon from  '../resources/icons/serviceMon.svg'
 import Data from  '../resources/icons/serviceData.svg'
 import Training from  '../resources/icons/serviceTraining.svg'
 import Supply from  '../resources/icons/serviceSupply.svg'
+import plotree from  '../resources/logo-invert-1.svg'
 
 class Services extends Component {
   componentDidMount() {
@@ -30,6 +31,8 @@ class Services extends Component {
     imglink: Data,
     title: 'Data Analysis and Visualization',
     desc: 'Our interactive visualizations and dashboards allow our clients to identify data trends and patterns which assist them in effective decision making. In collaboration with our partners, GAT Consulting offers services which aim to convert historical and real time data into meaningful insights and accurate forecasting tools.',
+    partnerlink: plotree,
+    partnerdesc: 'In partnership with Plotree Info Design'
   },{
     imglink: Training,
     title: 'Trainings',

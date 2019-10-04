@@ -3,6 +3,12 @@ import { Grid, Row, Col } from 'react-bootstrap'
 import Fade from 'react-reveal/Fade';
 
 class ServiceComponent extends Component {
+
+  plotree = () => {
+    window.open("https://plotree.studio", "Growing Data Narratives | Plotree Info Design");
+    window.close();
+  }
+
   render () {
     return (
       <div>
@@ -30,6 +36,12 @@ class ServiceComponent extends Component {
                 <Col lg={6} md={6} sm={6} xs={12} style={{marginBottom: '15px', alignSelf: 'center'}}>
                   <h2 className="serviceHead" style={{fontWeight: '300', fontSize: '37.5px'}}>{serviceItem.title}</h2>
                   <p style={{marginTop: '15px', fontSize: '16px', fontWeight: '300', textAlign: 'justify'}}>{serviceItem.desc}</p>
+                  {serviceItem.partnerlink ? (
+                    <div style={{display: 'flex'}}>
+                      <p style={{marginTop: '15px', fontSize: '16px', fontWeight: '600', textAlign: 'justify'}}>{serviceItem.partnerdesc}</p>
+                      <img alt="Service Partner" src={serviceItem.partnerlink} style={{width: '125px', marginLeft: '10px', cursor: 'pointer'}} onClick={() => this.plotree()}/>
+                    </div>
+                  ) : (<div></div>)}
                 </Col>
                 </Fade>
               </Row>
