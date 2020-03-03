@@ -29,6 +29,10 @@ import girls from '../resources/projects/girlsschool.jpg'
 import pwd from '../resources/projects/pwd.jpg'
 import psssp from '../resources/projects/psssp.jpg'
 import cutlery from '../resources/projects/cutlery.jpg'
+import art from '../resources/projects/art.jpg'
+import cpd from '../resources/projects/cpd.jpg'
+import wash1 from '../resources/projects/wash1.jpg'
+import wash2 from '../resources/projects/wash2.jpg'
 
 class Portfolio extends Component {
 
@@ -49,6 +53,16 @@ class Portfolio extends Component {
       services: ['', '']
     },
     surveyprojects: [{
+      name: 'Mapping of Arts and Artisans in Pakistan',
+      sector: 'Research/Arts',
+      client: 'British Council',
+      location: 'All over Pakistan',
+      desc: 'This project is a mapping exercise to highlight the unique features of the art sectors in 12 identified creative cities, analyse strengths and weaknesses of each, and identify the potential for development so that solutions based on human demographics and geography can be shared for strengthening the sector. Further, the research aims to create a map of the creative and cultural industry across cities of Pakistan in order to identify hubs where socioeconomic impact is visible.',
+      startdate: 'December 2019',
+      enddate: 'December 2020',
+      services: ['Mapping', 'Digitised Evaluation', 'Survey'],
+      imagesrc: art
+    },{
       name: 'Industry Technology Benchmarking Study for Category III (Cutlery Product)',
       sector: 'Research/Industry',
       client: 'Technology Upgradation and Skill Development Company (TUSDEC), Ministry of Industries , GOP',
@@ -180,6 +194,16 @@ class Portfolio extends Component {
       imagesrc: stateland
     }],
     tpvprojects: [{
+      name: 'Evauation of CPD and LND Pilot Projects',
+      sector: 'Education',
+      client: 'Cambridge Education',
+      location: '7 districts of Punjab',
+      desc: 'The objective of the evaluation is to determine the usefulness of the revised Continuous Professional Development (CPD) programme and the Literacy and Numeracy Development (LND) models in southern, central and northern Punjab in high and low performing districts. The new models have made use of digital content for training teachers and this project aims at evaluating the impact of the new blended approach on teaching methodologies.',
+      startdate: 'November 2019',
+      enddate: 'February 2020',
+      services: ['Third Party Validation', 'Survey', 'Training', 'Data Analysis'],
+      imagesrc: cpd
+    },{
       name: 'Assessment of Learning Outcomes of Students of Community & Government Schools in PPR Supported Districts',
       sector: 'Education',
       client: 'Pakistan Poverty Alleviation Fund (PPAF)',
@@ -261,6 +285,26 @@ class Portfolio extends Component {
       imagesrc: food
     }],
     mneprojects: [{
+      name: 'Monitoring & Evaluation of WASH facilities',
+      sector: 'Health/Hygiene/Water',
+      client: 'UNICEF',
+      location: '8 districts of Punjab',
+      desc: 'Monitoring and certification of construction work WASH facilities in schools, health care facilities and handpumps in 8 districts of Punjab.',
+      startdate: 'March 2020',
+      enddate: 'August 2020',
+      services: ['HR', 'Evaluation', 'Training', 'Validation'],
+      imagesrc: wash1
+    },{
+      name: 'Monitoring & Evaluation of WASH facilities',
+      sector: 'Health/Hygiene/Water',
+      client: 'UNICEF',
+      location: 'District Jhang',
+      desc: 'Monitoring and certification of construction work WASH facilities in schools, health care facilities and handpumps in 4 tehsils of district Jhang. ',
+      startdate: 'December 2019',
+      enddate: 'February 2020',
+      services: ['HR', 'Evaluation', 'Training', 'Validation'],
+      imagesrc: wash2
+    },{
       name: 'Evaluation of reenrollment of children in schools',
       sector: 'Education',
       client: 'School Education Department',
@@ -374,7 +418,7 @@ class Portfolio extends Component {
             <h2 style={{textAlign: 'left', marginBottom: '20px', fontWeight: '300', fontSize: '25px'}}>THIRD PARTY VALIDATIONS</h2>
           </Col>
           {this.state.tpvprojects.length > 0 && this.state.tpvprojects.map((tpvproj, index) => (
-            <Col key={index} lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px'}}>
+            <Col key={index} lg={3} md={3} sm={4} xs={6} style={{marginBottom: '15px', float: 'right'}}>
               <Tilt className="Tilt" options={{ max : 15 }} style={{ height: '100%', width: '100%' }} >
                 <div onClick={() => this.setState({show: true, currProj: {name: tpvproj.name, sector: tpvproj.sector, client: tpvproj.client, location: tpvproj.location,
                   desc: tpvproj.desc, startdate: tpvproj.startdate, enddate: tpvproj.enddate, services: tpvproj.services}})} style={{position: 'relative'}}>
